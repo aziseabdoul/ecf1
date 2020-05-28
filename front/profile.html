@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ECF 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <div class="container">
+	
+        <div class="box">
+            <h1>Profil</h1>
+         <p>Prénom</p><br>
+         <p>Nom</p><br>
+         <p>Age</p><br> 
+      <a href="login.html">Se déconnecter</a>
+    </div>
+    </div>
+
+    <style type="text/css">
+
+        .container {
+            height: 100%;
+            width: 100%;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            height: 250px;
+            width: 250px;
+        }
+    
+    </style>
+    
+    <script>
+        
+     function getProfile(){
+    
+                fetch('https://localhost:8080/users/id', {
+                })
+            }
+    
+    </script>  
+
+</body>
+
+</html>

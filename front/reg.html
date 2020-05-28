@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ECF 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <div class="container">
+	
+        <div class="box">
+            <h1>Inscription</h1>
+    <form>
+
+      <label>Prénom:</label><br>
+      <input type="text"><br>
+      <label>Nom:</label><br>
+      <input type="text"><br>
+      <label>Date de naissance:</label><br>
+      <input type="text"><br>
+      <label>E-mail:</label><br>
+      <input type="text"><br>
+      <label>Mot de passe:</label><br>
+      <input type="password">
+    
+    </form> 
+    <button id="register">S'inscrire</button>
+      
+    </div>
+    </div>
+    <style type="text/css">
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box {
+            height: 250px;
+            width: 250px;
+        }
+    
+    </style>
+    
+    <script>
+        
+        document.getElementById('register').addEventListener('submit', register);
+    
+     function register(event){
+                event.preventDefault();
+    
+                fetch('https://localhost:8080/users', {
+                    method: 'POST',
+                })
+            }
+    
+    </script>
+
+</body>
+
+</html>

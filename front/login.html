@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ECF 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="box">
+            <h1>Connexion</h1>
+            <form>
+                
+                <label>E-mail:</label><br>
+                <input type="text" placeholder="abc123@domain.fr"><br>
+                <label>Mot de passe:</label><br>
+                <input type="password">
+
+            </form>
+            <button id="login">Se connecter</button>
+            <a href="reg.html">S'inscrire</a>
+        </div>
+    </div>
+    
+    <style type="text/css">
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            height: 250px;
+            width: 250px;
+        }
+    </style>
+
+    <script>
+        document.getElementById('login').addEventListener('submit', login);
+
+        function login(event) {
+            event.preventDefault();
+
+            fetch('https://localhost:8080/users', {
+                method: 'POST',
+            })
+        }
+    </script>
+
+</body>
+
+</html>
